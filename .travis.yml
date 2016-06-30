@@ -1,0 +1,21 @@
+language: csharp
+
+sudo: false  # use the new container-based Travis infrastructure
+
+script: 
+  - cd CSharp/scripts/
+  - ./build.sh xUnitTest45
+  - cd ..
+  - cd ..
+  - cd FSharp/scripts/
+  - ./build.sh BuildApp45
+  - cd ..
+  - cd ..
+
+branches:
+  except:
+    - gh-pages
+
+before_install:
+ - chmod +x CSharp/scripts/build.sh
+ - chmod +x FSharp/scripts/build.sh
