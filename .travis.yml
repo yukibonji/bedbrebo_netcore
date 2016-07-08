@@ -23,7 +23,7 @@ os:
 
 env:
   matrix:
-    - CLI_VERSION=1.6.0
+    - CLI_VERSION=1.0.0-preview1-002702
     - CLI_VERSION=Latest
 
 matrix:
@@ -36,7 +36,7 @@ before_install:
   #- if test "$TRAVIS_OS_NAME" == "osx"; then brew update; brew install icu4c; fi
 
   # Download script to install dotnet cli
-  - curl -L --create-dirs https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0/scripts/obtain/dotnet-install.sh -o CSharp/scripts/obtain/install.sh
+  - curl -L --create-dirs https://raw.githubusercontent.com/dotnet/cli/rel/1.0.0-preview1/scripts/obtain/dotnet-install.sh -o CSharp/scripts/obtain/install.sh
   - find CSharp/scripts -name "*.sh" -exec chmod +x {} \;
   - export DOTNET_INSTALL_DIR="$PWD/.dotnetcli"
   # use bash to workaround bug https://github.com/dotnet/cli/issues/1725
