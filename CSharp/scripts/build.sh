@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd src/
+cd CSharp/src/
 
 if test "$OS" = "Windows_NT"
 then
