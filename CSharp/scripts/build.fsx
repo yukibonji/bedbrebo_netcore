@@ -45,7 +45,7 @@ let setParams defaults = {
 // define test dlls
 let testDlls = !! (testDir + "*.UnitTests.dll")
 
-Target "xUnitTest" (fun _ ->
+(*Target "xUnitTest" (fun _ ->
     tracefn "Running tests..."
     testDlls
     |> xUnit2 (fun p -> 
@@ -56,7 +56,7 @@ Target "xUnitTest" (fun _ ->
 
 Target "xUnitTest45" (fun _ ->
     runSingleTarget (getTarget "xUnitTest")
-)
+)*)
 
 Target "RestorePackages" (fun _ -> 
      "./bedbrebo.sln"
@@ -83,11 +83,11 @@ Target "Default" DoNothing
 "Clean"
    ==> "RestorePackages"
    ==> "BuildApp"
-   ==> "xUnitTest"
+   //==> "xUnitTest"
 
 "Clean"
    ==> "RestorePackages"
    ==> "BuildApp45"
-   ==> "xUnitTest45"
+   //==> "xUnitTest45"
 
 RunTargetOrDefault "BuildApp"
