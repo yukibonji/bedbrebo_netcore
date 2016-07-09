@@ -54,7 +54,7 @@ script:
   # - mkdir -p "test/test-dotnet-new" && pushd "test/test-dotnet-new"
   # - dotnet new --lang c#
   - dotnet restore
-  - dotnet --verbose build
+  - dotnet --verbose build **/project.json
   # - dotnet --verbose run a b
   # - popd
   # Run all tests 
