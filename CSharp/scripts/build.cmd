@@ -19,7 +19,7 @@ if errorlevel 1 (
 SET FAKE_PATH=packages\FAKE\tools\Fake.exe
 
 IF [%1]==[] (
-    "%FAKE_PATH%" "..\scripts\build.fsx" "Default" 
+    "%FAKE_PATH%" "..\scripts\build.fsx" "BuildApp" 
 ) ELSE (
     "%FAKE_PATH%" "..\scripts\build.fsx" %* 
 ) 

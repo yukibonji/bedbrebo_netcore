@@ -53,10 +53,10 @@ script:
   # Run dotnet new 
   # - mkdir -p "test/test-dotnet-new" && pushd "test/test-dotnet-new"
   # - dotnet new --lang c#
-  # - dotnet restore
-  # - dotnet --verbose build
+   - dotnet restore
+   - dotnet --verbose build
   # - dotnet --verbose run a b
   # - popd
   # Run all tests 
   # - CSharp/scripts/run-tests.sh
-  - CSharp/scripts/build.sh BuildApp
+  # - CSharp/scripts/build.sh BuildApp
